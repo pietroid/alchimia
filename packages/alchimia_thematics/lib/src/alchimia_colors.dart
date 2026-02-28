@@ -7,4 +7,6 @@ abstract final class AlchimiaColors {
   static const Color cream = Color(0xFFFFF1D1);
   static const Color dimText = Color(0xFF888888);
   static const Color border = Color(0xFF2A2A2A);
+  static const Color accent = Color(0xFF4A4A8A);
+  static const Color panelBorder = Color(0xFF4A4A4A);
 }

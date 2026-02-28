@@ -9,6 +9,8 @@ class EngineCanvas extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
     return Expanded(
       child: Center(
         child: BlocBuilder<CanvasCubit, CanvasState>(
@@ -23,11 +25,11 @@ class EngineCanvas extends StatelessWidget {
                   width: 390,
                   height: 844,
                   decoration: BoxDecoration(
-                    color: const Color(0xFF1A1A1A),
+                    color: colorScheme.surfaceContainer,
                     border: Border.all(
                       color: isHovering
-                          ? const Color(0xFFFFF1D1)
-                          : const Color(0xFF2A2A2A),
+                          ? colorScheme.onSurface
+                          : colorScheme.outline,
                       width: 1.5,
                     ),
                   ),

@@ -12,8 +12,7 @@ class WidgetMenuPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 80,
-      // TODO(any): Move this to thematics.
-      color: const Color(0xFF1A1A1A),
+      color: Theme.of(context).colorScheme.surfaceContainer,
       child: Column(
         children: items.map((item) => _DraggableItem(item: item)).toList(),
       ),
@@ -29,7 +28,6 @@ class _DraggableItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      // TODO(any): Move this to thematics.
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
       child: Draggable<WidgetPayload>(
         data: item.payloadFactory(),
@@ -51,22 +49,20 @@ class _BoxIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Container(
       width: 48,
       height: 48,
       decoration: BoxDecoration(
-        border: Border.all(color: const Color(0xFF4A4A4A)),
-        // TODO(any): Move this to thematics.
-        color: const Color(0xFF2A2A2A),
+        border: Border.all(color: colorScheme.outlineVariant),
+        color: colorScheme.outline,
       ),
       child: Center(
-        // TODO(any): Move this to thematics.
         child: Text(
           name,
-          style: const TextStyle(
-            fontFamily: 'Menlo',
+          style: TextStyle(
             fontSize: 9,
-            color: Color(0xFF888888),
+            color: colorScheme.onSurfaceVariant,
           ),
         ),
       ),

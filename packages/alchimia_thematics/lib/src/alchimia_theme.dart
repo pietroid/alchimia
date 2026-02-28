@@ -11,6 +11,14 @@ abstract final class AlchimiaTheme {
           surface: AlchimiaColors.background,
           onSurface: AlchimiaColors.cream,
           outline: AlchimiaColors.border,
+          // Panel background (sidebars, drawers).
+          surfaceContainer: AlchimiaColors.panel,
+          // Subdued foreground text and icons.
+          onSurfaceVariant: AlchimiaColors.dimText,
+          // Primary interactive / accent color.
+          primary: AlchimiaColors.accent,
+          // Subtle border inside panels and cards.
+          outlineVariant: AlchimiaColors.panelBorder,
         ),
         appBarTheme: const AppBarTheme(
           backgroundColor: AlchimiaColors.panel,
