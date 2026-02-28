@@ -7,6 +7,12 @@ environment:
   sdk: ^3.5.0
 
 dependencies:
+  alchimia_engine:
+    path: packages/alchimia_engine
+  alchimia_shell:
+    path: packages/alchimia_shell
+  alchimia_thematics:
+    path: packages/alchimia_thematics
   bloc: ^8.1.4
   flutter:
     sdk: flutter

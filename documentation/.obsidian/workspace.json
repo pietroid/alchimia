@@ -11,14 +11,10 @@
             "id": "76f5ddce5a116ae9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "product/ready_to_development/Base architecture development.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Base architecture development"
+              "title": "New tab"
             }
           }
         ]
@@ -185,9 +181,13 @@
   },
   "active": "76f5ddce5a116ae9",
   "lastOpenFiles": [
+    "brainstorming",
+    "document_template.md",
+    "product/document_template.md",
+    "product/ready_to_development/Base architecture development.md",
+    "product/done/Base architecture development.md",
     "README.md",
     "Plan - MVP.md",
-    "product/ready_to_development/Base architecture development.md",
     "product/done/Splash screen.md",
     "ready_to_development/Untitled.md",
     "ready_to_development",

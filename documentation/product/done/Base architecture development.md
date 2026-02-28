@@ -27,3 +27,10 @@ You will concern yourself with building the grounds for the three main things on
 - Engine doesn't depend on nothing and is standalone.
 - You will call the shell on the main app from the creation route widget, using the thematization implementation and you will need to call the canvas and the menu. Put the menu on the left and the canvas on the side.
 - The canvas must be a good size, it's like the phone screen, so it can take a good amount of the desktop, and also of course, must be vertical.
+
+# Final evaluation (after the task is done)
+
+- Everything is working as expected!
+- The code is very clean and succint
+- Documentation doesnt follow the pattern of dart docs (@macros)
+- Sometimes the separation of concerns leaked. For example, the shell has some colors but it needed to be only on the thematics engine. 
