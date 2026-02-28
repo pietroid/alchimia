@@ -1,5 +1,5 @@
-import 'package:alchemy/counter/counter.dart';
-import 'package:alchemy/l10n/l10n.dart';
+import 'package:alchimia/counter/counter.dart';
+import 'package:alchimia/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

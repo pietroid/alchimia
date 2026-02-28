@@ -1,5 +1,5 @@
-import 'package:alchemy/app/app.dart';
-import 'package:alchemy/bootstrap.dart';
+import 'package:alchimia/app/app.dart';
+import 'package:alchimia/bootstrap.dart';
 
 void main() {
   bootstrap(() => const App());

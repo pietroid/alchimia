@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example.verygoodcore.alchemy" "\0"
-            VALUE "FileDescription", "alchemy" "\0"
+            VALUE "CompanyName", "com.example.verygoodcore.alchimia" "\0"
+            VALUE "FileDescription", "alchimia" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "alchemy" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.example.verygoodcore.alchemy. All rights reserved." "\0"
-            VALUE "OriginalFilename", "alchemy.exe" "\0"
-            VALUE "ProductName", "Alchemy" "\0"
+            VALUE "InternalName", "alchimia" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 com.example.verygoodcore.alchimia. All rights reserved." "\0"
+            VALUE "OriginalFilename", "alchimia.exe" "\0"
+            VALUE "ProductName", "Alchimia" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

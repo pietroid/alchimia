@@ -3,7 +3,7 @@ created: 2026-02-25T20:19
 updated: 2026-02-26T07:58
 ---
 
-The plan for the Alchemy app is very simple. 
+The plan for the Alchimia app is very simple. 
 
 We want to make software engineering not just easy (AIs are doing that), but actually enjoyable in the sense of using crafts, tools and interactive environments to build what you want.
 
@@ -21,7 +21,7 @@ Just writing stuff everytime is boring, we are more than words for some occasion
 
 # What
 
-Alchemy is an App construction platform. That can turn itself into a game. That can turn itself into a educational platform. Whatever we could use with that platform, to engage people in learning and developing the software engineering craft.
+Alchimia is an App construction platform. That can turn itself into a game. That can turn itself into a educational platform. Whatever we could use with that platform, to engage people in learning and developing the software engineering craft.
 
 Imagine you having an idea in an afternoon, and instead of just seeing the AI build all the code for you, you be able to visually select all the elements, one by one, as you do in a puzzle? However, the joy of this is that you don't need to read tons and tons of files, words, docs. 
 
@@ -41,7 +41,7 @@ We can inspect our app live, as we can do with Flutter. At the same time, we can
 
 # How
 
-The Alchemy app has three domains:
+The Alchimia app has three domains:
 
 - Engine: An engine that holds a catalogue of widgets as well as ways to connect with them and manipulate them in real time (more real time than hot-reload).
 - Shell: An interface that makes visualization and edition good for every aspect that we want to inspect from this engine.

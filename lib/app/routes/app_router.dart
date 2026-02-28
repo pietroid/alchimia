@@ -1,5 +1,5 @@
-import 'package:alchemy/creation/creation.dart';
-import 'package:alchemy/splash/splash.dart';
+import 'package:alchimia/creation/creation.dart';
+import 'package:alchimia/splash/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

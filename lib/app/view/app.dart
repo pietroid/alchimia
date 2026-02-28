@@ -1,5 +1,5 @@
-import 'package:alchemy/app/app.dart';
-import 'package:alchemy/l10n/l10n.dart';
+import 'package:alchimia/app/app.dart';
+import 'package:alchimia/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {

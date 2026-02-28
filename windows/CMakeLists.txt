@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(alchemy LANGUAGES CXX)
+project(alchimia LANGUAGES CXX)
 
-set(BINARY_NAME "alchemy")
+set(BINARY_NAME "alchimia")
 
 cmake_policy(SET CMP0063 NEW)
 

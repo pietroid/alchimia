@@ -1,0 +1,53 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "development",
+      "runtimeExecutable": "/Users/pietroteruya/dev/flutter/bin/flutter",
+      "runtimeArgs": [
+        "run",
+        "-d",
+        "web-server",
+        "--web-port",
+        "8080",
+        "--flavor",
+        "development",
+        "--target",
+        "lib/main_development.dart"
+      ],
+      "port": 8080
+    },
+    {
+      "name": "staging",
+      "runtimeExecutable": "/Users/pietroteruya/dev/flutter/bin/flutter",
+      "runtimeArgs": [
+        "run",
+        "-d",
+        "web-server",
+        "--web-port",
+        "8081",
+        "--flavor",
+        "staging",
+        "--target",
+        "lib/main_staging.dart"
+      ],
+      "port": 8081
+    },
+    {
+      "name": "production",
+      "runtimeExecutable": "/Users/pietroteruya/dev/flutter/bin/flutter",
+      "runtimeArgs": [
+        "run",
+        "-d",
+        "web-server",
+        "--web-port",
+        "8082",
+        "--flavor",
+        "production",
+        "--target",
+        "lib/main_production.dart"
+      ],
+      "port": 8082
+    }
+  ]
+}

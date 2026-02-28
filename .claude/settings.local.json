@@ -11,7 +11,9 @@
       "Bash(flutter pub get:*)",
       "Bash(/Users/pietroteruya/dev/flutter/bin/flutter pub get:*)",
       "Bash(/Users/pietroteruya/dev/flutter/bin/flutter analyze:*)",
-      "Bash(/Users/pietroteruya/dev/flutter/bin/flutter test:*)"
+      "Bash(/Users/pietroteruya/dev/flutter/bin/flutter test:*)",
+      "Bash(chmod +x /Users/pietroteruya/dev/alchimia/scripts/rename_alchemy_to_alchimia.sh)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }

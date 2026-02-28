@@ -1,4 +1,4 @@
-name: alchemy
+name: alchimia
 
 concurrency:
   group: $-$

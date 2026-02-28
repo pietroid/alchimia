@@ -1,4 +1,4 @@
-package com.example.verygoodcore.alchemy
+package com.example.verygoodcore.alchimia
 
 import io.flutter.embedding.android.FlutterActivity
 
