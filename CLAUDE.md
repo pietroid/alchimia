@@ -11,7 +11,6 @@
 - Packages are defined in `packages`.
 
 
-
 ## Workflow
 
 Mainly those two agents come in play in separate moments of the development process. First:
