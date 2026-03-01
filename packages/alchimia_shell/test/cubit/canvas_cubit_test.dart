@@ -6,50 +6,65 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('CanvasCubit', () {
-    test('initial state has empty payloads list', () {
-      expect(CanvasCubit().state.payloads, isEmpty);
+    test('initial state has empty widgets list', () {
+      expect(CanvasCubit().state.widgets, isEmpty);
     });
 
     blocTest<CanvasCubit, CanvasState>(
-      'addWidget once appends the payload',
+      'addWidget once appends the widget',
       build: CanvasCubit.new,
-      act: (cubit) => cubit.addWidget(
-        const ContainerPayload(width: 100, height: 50, color: Color(0xFF0000FF)),
-      ),
-      expect: () => [
-        CanvasState(
-          payloads: const [
-            ContainerPayload(width: 100, height: 50, color: Color(0xFF0000FF)),
+      act:
+          (cubit) => cubit.addWidget(
+            const BoxWidgetData(
+              width: 100,
+              height: 50,
+              color: Color(0xFF0000FF),
+            ),
+          ),
+      expect:
+          () => const [
+            CanvasState(
+              widgets: [
+                BoxWidgetData(width: 100, height: 50, color: Color(0xFF0000FF)),
+              ],
+            ),
           ],
-        ),
-      ],
     );
 
     blocTest<CanvasCubit, CanvasState>(
-      'addWidget twice appends both payloads in order',
+      'addWidget twice appends both widgets in order',
       build: CanvasCubit.new,
       act: (cubit) {
         cubit
           ..addWidget(
-            const ContainerPayload(width: 100, height: 50, color: Color(0xFF0000FF)),
+            const BoxWidgetData(
+              width: 100,
+              height: 50,
+              color: Color(0xFF0000FF),
+            ),
           )
           ..addWidget(
-            const ContainerPayload(width: 200, height: 80, color: Color(0xFFFF0000)),
+            const BoxWidgetData(
+              width: 200,
+              height: 80,
+              color: Color(0xFFFF0000),
+            ),
           );
       },
-      expect: () => [
-        CanvasState(
-          payloads: const [
-            ContainerPayload(width: 100, height: 50, color: Color(0xFF0000FF)),
+      expect:
+          () => const [
+            CanvasState(
+              widgets: [
+                BoxWidgetData(width: 100, height: 50, color: Color(0xFF0000FF)),
+              ],
+            ),
+            CanvasState(
+              widgets: [
+                BoxWidgetData(width: 100, height: 50, color: Color(0xFF0000FF)),
+                BoxWidgetData(width: 200, height: 80, color: Color(0xFFFF0000)),
+              ],
+            ),
           ],
-        ),
-        CanvasState(
-          payloads: const [
-            ContainerPayload(width: 100, height: 50, color: Color(0xFF0000FF)),
-            ContainerPayload(width: 200, height: 80, color: Color(0xFFFF0000)),
-          ],
-        ),
-      ],
     );
   });
 }

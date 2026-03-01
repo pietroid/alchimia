@@ -17,26 +17,26 @@ class ShellView extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
 
-    final items = catalog ?? [
-      WidgetCatalogItem(
-        name: 'BOX',
-        payloadFactory: () => ContainerPayload(
-          width: 120,
-          height: 80,
-          color: colorScheme.primary,
-        ),
-      ),
-    ];
+    final items =
+        catalog ??
+        [
+          WidgetCatalogItem(
+            name: 'BOX',
+            payloadFactory:
+                () => BoxWidgetData(
+                  width: 120,
+                  height: 80,
+                  color: colorScheme.primary,
+                ),
+          ),
+        ];
 
     return BlocProvider(
       create: (_) => CanvasCubit(),
       child: Scaffold(
         backgroundColor: colorScheme.surface,
         body: Row(
-          children: [
-            WidgetMenuPanel(items: items),
-            const EngineCanvas(),
-          ],
+          children: [WidgetMenuPanel(items: items), const EngineCanvas()],
         ),
       ),
     );

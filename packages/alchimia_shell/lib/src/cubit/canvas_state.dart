@@ -2,15 +2,15 @@ part of 'canvas_cubit.dart';
 
 /// Immutable state for [CanvasCubit].
 class CanvasState extends Equatable {
-  const CanvasState({this.payloads = const []});
+  const CanvasState({this.widgets = const []});
 
-  /// Ordered list of payloads present on the canvas.
-  final List<WidgetPayload> payloads;
+  /// Ordered list of widgets present on the canvas.
+  final List<WidgetData> widgets;
 
-  CanvasState copyWith({List<WidgetPayload>? payloads}) {
-    return CanvasState(payloads: payloads ?? this.payloads);
+  CanvasState copyWith({List<WidgetData>? widgets}) {
+    return CanvasState(widgets: widgets ?? this.widgets);
   }
 
   @override
-  List<Object?> get props => [payloads];
+  List<Object?> get props => [widgets];
 }

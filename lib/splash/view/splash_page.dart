@@ -64,6 +64,7 @@ class _SplashViewState extends State<SplashView>
 
   @override
   void dispose() {
+    _volumeController.dispose();
     _player.dispose();
     super.dispose();
   }

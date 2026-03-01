@@ -29,7 +29,7 @@ class _DraggableItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-      child: Draggable<WidgetPayload>(
+      child: Draggable<WidgetData>(
         data: item.payloadFactory(),
         feedback: _BoxIcon(name: item.name),
         childWhenDragging: Opacity(
@@ -60,10 +60,7 @@ class _BoxIcon extends StatelessWidget {
       child: Center(
         child: Text(
           name,
-          style: TextStyle(
-            fontSize: 9,
-            color: colorScheme.onSurfaceVariant,
-          ),
+          style: TextStyle(fontSize: 9, color: colorScheme.onSurfaceVariant),
         ),
       ),
     );

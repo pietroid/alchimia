@@ -1,5 +1,7 @@
 /// Defines the types of widgets that can be rendered by the Alchimia engine.
 enum WidgetType {
+  unknown,
+
   /// Box is the internal name for the Container widget.
   box,
 

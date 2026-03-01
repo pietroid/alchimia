@@ -4,12 +4,12 @@ import 'package:equatable/equatable.dart';
 
 part 'canvas_state.dart';
 
-/// Manages the list of [WidgetPayload]s dropped onto the canvas.
+/// Manages the list of [WidgetData]s dropped onto the canvas.
 class CanvasCubit extends Cubit<CanvasState> {
   CanvasCubit() : super(const CanvasState());
 
-  /// Appends [payload] to the end of the canvas payload list.
-  void addWidget(WidgetPayload payload) {
-    emit(state.copyWith(payloads: [...state.payloads, payload]));
+  /// Appends [widget] to the end of the canvas widget list.
+  void addWidget(WidgetData widget) {
+    emit(state.copyWith(widgets: [...state.widgets, widget]));
   }
 }

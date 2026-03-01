@@ -15,7 +15,7 @@ class EngineCanvas extends StatelessWidget {
       child: Center(
         child: BlocBuilder<CanvasCubit, CanvasState>(
           builder: (context, state) {
-            return DragTarget<WidgetPayload>(
+            return DragTarget<WidgetData>(
               onAcceptWithDetails: (details) {
                 context.read<CanvasCubit>().addWidget(details.data);
               },
@@ -27,18 +27,20 @@ class EngineCanvas extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: colorScheme.surfaceContainer,
                     border: Border.all(
-                      color: isHovering
-                          ? colorScheme.onSurface
-                          : colorScheme.outline,
+                      color:
+                          isHovering
+                              ? colorScheme.onSurface
+                              : colorScheme.outline,
                       width: 1.5,
                     ),
                   ),
                   child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: state.payloads
-                          .map((p) => EngineRenderer(payload: p))
-                          .toList(),
+                      children:
+                          state.widgets
+                              .map((p) => EngineRenderer(data: p))
+                              .toList(),
                     ),
                   ),
                 );

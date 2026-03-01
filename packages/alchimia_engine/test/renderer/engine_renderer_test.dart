@@ -6,9 +6,9 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('EngineRenderer', () {
     testWidgets(
-      'renders Container with correct dimensions and color for ContainerPayload',
+      'renders Container with correct dimensions and color for BoxWidgetData',
       (tester) async {
-        const payload = ContainerPayload(
+        const payload = BoxWidgetData(
           width: 120,
           height: 80,
           color: Color(0xFF4A4A8A),
@@ -16,7 +16,7 @@ void main() {
 
         await tester.pumpWidget(
           const MaterialApp(
-            home: Scaffold(body: EngineRenderer(payload: payload)),
+            home: Scaffold(body: EngineRenderer(data: payload)),
           ),
         );
 
@@ -33,12 +33,10 @@ void main() {
     testWidgets('renders SizedBox.shrink for unknown payload type', (
       tester,
     ) async {
-      const payload = _UnknownPayload();
+      const data = _UnknownData();
 
       await tester.pumpWidget(
-        const MaterialApp(
-          home: Scaffold(body: EngineRenderer(payload: payload)),
-        ),
+        const MaterialApp(home: Scaffold(body: EngineRenderer(data: data))),
       );
 
       final sizedBox = tester.widget<SizedBox>(find.byType(SizedBox));
@@ -48,6 +46,6 @@ void main() {
   });
 }
 
-class _UnknownPayload extends WidgetPayload {
-  const _UnknownPayload() : super(type: WidgetType.box);
+class _UnknownData extends WidgetData {
+  const _UnknownData() : super(type: WidgetType.unknown);
 }
