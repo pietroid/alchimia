@@ -23,19 +23,33 @@ class SplashView extends StatefulWidget {
   State<SplashView> createState() => _SplashViewState();
 }
 
-class _SplashViewState extends State<SplashView> {
+class _SplashViewState extends State<SplashView>
+    with SingleTickerProviderStateMixin {
   late final AudioPlayer _player;
+  late final AnimationController _volumeController = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 20000),
+  );
 
   @override
   void initState() {
     super.initState();
     _player = AudioPlayer();
-    _initAudio();
+    // Start the volume fade-in after a short delay
+    Future.delayed(const Duration(milliseconds: 1000), () {
+      _volumeController.forward();
+      _initAudio();
+    });
+
+    // Listen to the volume animation and update the player's volume
+    _volumeController.addListener(() {
+      _player.setVolume(_volumeController.value);
+    });
   }
 
   Future<void> _initAudio() async {
     try {
-      await _player.setAsset('assets/music/background_music2.mp3');
+      await _player.setAsset('assets/music/alchimia - goldenbrown.mp3');
       await _player.setLoopMode(LoopMode.one);
       await _player.play();
     } catch (_) {
@@ -78,10 +92,9 @@ class _SplashViewState extends State<SplashView> {
                 builder: (context, subtitle) {
                   return AnimatedSwitcher(
                     duration: const Duration(milliseconds: 800),
-                    transitionBuilder: (child, animation) => FadeTransition(
-                      opacity: animation,
-                      child: child,
-                    ),
+                    transitionBuilder:
+                        (child, animation) =>
+                            FadeTransition(opacity: animation, child: child),
                     child: GlowingText(
                       key: ValueKey(subtitle),
                       text: subtitle,

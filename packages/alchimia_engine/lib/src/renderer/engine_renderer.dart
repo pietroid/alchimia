@@ -1,4 +1,4 @@
-import 'package:alchimia_engine/src/payload/widget_payload.dart';
+import 'package:alchimia_engine/src/data/widget_payload.dart';
 import 'package:flutter/material.dart';
 
 /// Renders a [WidgetPayload] into its corresponding Flutter widget.
@@ -11,11 +11,7 @@ class EngineRenderer extends StatelessWidget {
   Widget build(BuildContext context) {
     if (payload is ContainerPayload) {
       final p = payload as ContainerPayload;
-      return Container(
-        width: p.width,
-        height: p.height,
-        color: p.color,
-      );
+      return Container(width: p.width, height: p.height, color: p.color);
     }
     return const SizedBox.shrink();
   }

@@ -1,10 +1,15 @@
 import 'dart:ui';
 
+import 'package:alchimia_engine/src/data/widget_type.dart';
+
 /// Base class for all widget payloads.
 ///
 /// A payload carries the data needed to render a specific widget type.
 abstract class WidgetPayload {
-  const WidgetPayload();
+  const WidgetPayload({required this.type});
+
+  /// The type of widget this payload represents.
+  final WidgetType type;
 }
 
 /// Payload for rendering a plain colored container.
@@ -13,7 +18,7 @@ class ContainerPayload extends WidgetPayload {
     required this.width,
     required this.height,
     required this.color,
-  });
+  }) : super(type: WidgetType.box);
 
   final double width;
   final double height;
